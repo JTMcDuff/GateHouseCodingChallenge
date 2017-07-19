@@ -46,11 +46,13 @@
          
          if ( boxNum % 2 === 0 ) {
          		console.log('It\'s even!');
+         		evenBox();
          		return;
          }
 
          if ( boxNum % 2 === 1 ) {
          	console.log('It\'s odd!');
+         	oddBox();
          	return;
          }
          
@@ -78,6 +80,31 @@
       	  }
         })
       }
+
+      // oddBox is fired when an odd box that is not 3 is clicked.
+      // Turns all even boxes blue and text white.
+      function oddBox() {
+      	// Cache data length to save lookups.
+      	let len = dataArr.length;
+
+      	for ( let i = 2; i <= len; i += 2){
+      		let id = '#'+i;
+      		$( id ).css( {'background-color':'#380CF5', 'color':'#ffffff'} );
+      	}
+      }
+      
+      // evenBox is fired when an even box is clicked.
+      // Turns odd boxes red and their text white.
+      function evenBox() {
+      	// Cache data length to save lookups.
+      	let len = dataArr.length;
+
+      	for ( let i = 1; i <= len; i += 2){
+      		let id = '#'+i;
+      		$( id ).css( {'background-color':'#F50C0C', 'color':'#000000'} );
+      	}
+      }
+
     </script>
 
   </body>
