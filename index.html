@@ -30,10 +30,46 @@
 	      // Event listener for click events on our data boxes
 	      // Use unique id attribute to determine if even / odd, etc.
 	      $( '.databox' ).click( (element)=> {
-             let idNum = Number( element.target.id );
-             console.log(  idNum);
+             let boxNum = Number( element.target.id );
+             // Feed our number into our determiner function.
+             boxClick(boxNum);
 	      })
       });
+
+      // boxClick accepts the box id and fires the appropriate box change function.
+      function boxClick(boxNum) {
+         
+         if ( boxNum === 3 ) {
+            boxFade();
+            return;
+         }
+         
+         if ( boxNum % 2 === 0 ) {
+         		console.log('It\'s even!');
+         		return;
+         }
+
+         if ( boxNum % 2 === 1 ) {
+         	console.log('It\'s odd!');
+         	return;
+         }
+         
+         // Error handling.
+         console.log('boxNum is not an integer:  '+boxNum);
+      }
+
+      // boxFade makes databoxes fade out and in sequentially.
+      function boxFade() {
+      	// Cache data length to save lookups.
+      	let len = dataArr.length;
+      	for ( let i = 1; i <= len; i ++){
+      	  let id = '#'+i;
+      	  console.log('Fading '+i);
+          $( id ).delay(i * 225).fadeToggle( '100' );
+
+      	}
+
+      }
     </script>
 
   </body>
