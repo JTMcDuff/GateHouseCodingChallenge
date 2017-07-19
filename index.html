@@ -64,11 +64,19 @@
       	let len = dataArr.length;
       	for ( let i = 1; i <= len; i ++){
       	  let id = '#'+i;
-      	  console.log('Fading '+i);
-          $( id ).delay(i * 225).fadeToggle( '100' );
+      	  console.log('Fading out '+i);
+          $( id ).delay(i * 210).fadeToggle( '100' );
 
       	}
+      	//Fires once all changes to the databoxes are complete.
+        $('.databox').promise().done( ()=> {
+          for ( let j = 1; j <= len; j ++){
+      	  let id = '#'+j;
+      	  console.log('Fading in '+j);
+          $( id ).delay(j * 210).fadeToggle( '100' );
 
+      	  }
+        })
       }
     </script>
 
