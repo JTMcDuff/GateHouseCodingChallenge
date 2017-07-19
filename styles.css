@@ -1,0 +1,42 @@
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+/* All elements use Arial and centered text */
+body {
+	font-family: Arial;
+	text-align: center;
+}
+
+/* Over container for holding our content */
+.container {
+	width: 800px;
+	height: 900px;
+	margin: auto;
+	word-wrap: normal;
+	background-color: #2AB94C;
+	border: 2px solid #000000;
+}
+
+
+.titlebox {
+	font-size: 20px;
+	font-weight: bold;
+	font-style: italic;
+	color: #ffffff;
+	background-color: #000000;
+}
+
+/* databox class is for supplied by js array. */
+.databox {
+	width: 23%;
+	height: 250px;
+	line-height: 250px;
+	background-color: #ffffff;
+	font-size: 45px;
+	margin: 0 5px 0 5px;
+	border: 2px solid #000000;
+	float: left;
+}

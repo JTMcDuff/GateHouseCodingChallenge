@@ -7,11 +7,33 @@
   </head>
 
   <body>
-<h1> Hello World! </h1>
-<!--  -->
+  		<div class="container">
+
+		    <div class="titlebox">
+				<h1> GATEHOUSE MEDIA PRESENTS... </h1>
+		    </div>
+
+		</div>
 
     <script>
-      
+      // Dummy array with data.
+      let dataArr = ['one','two','three','four','five','six','seven','eight'];
+
+      // After document load, our jQuery comes online.
+      $( document ).ready( ()=> {
+      	  // Append data boxes to our container div.
+		for ( let i = 0; i < dataArr.length; i ++) {
+	      	let itemDiv = '<div class="databox" id=' + (i + 1) + '>' + dataArr[i] + '</div>';
+	      	$( itemDiv ).appendTo( ".container" );
+      	}
+
+	      // Event listener for click events on our data boxes
+	      // Use unique id attribute to determine if even / odd, etc.
+	      $( '.databox' ).click( (element)=> {
+             let idNum = Number( element.target.id );
+             console.log(  idNum);
+	      })
+      });
     </script>
 
   </body>
