@@ -33,7 +33,12 @@
              let boxNum = Number( element.target.id );
              // Feed our number into our determiner function.
              boxClick(boxNum);
-	      })
+	      });
+
+	      //Event Listener for header click event
+	      $( '.titlebox').click( ()=> {
+
+	      });
       });
 
       // boxClick accepts the box id and fires the appropriate box change function.
@@ -80,7 +85,7 @@
       	  }
         })
       }
-
+      //  Changes need to be refactored to add and remove classes rather than apply classes with jQuery.  
       // oddBox is fired when an odd box that is not 3 is clicked.
       // Turns all even boxes blue and text white.
       function oddBox() {
@@ -89,7 +94,7 @@
 
       	for ( let i = 2; i <= len; i += 2){
       		let id = '#'+i;
-      		$( id ).css( {'background-color':'#380CF5', 'color':'#ffffff'} );
+      		$( id ).css( );
       	}
       }
       
