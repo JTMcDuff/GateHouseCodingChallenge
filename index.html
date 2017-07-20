@@ -48,16 +48,15 @@
             boxFade();
             return;
          }
-         
+         // If the box number is even, we want to change out odd boxes.
          if ( boxNum % 2 === 0 ) {
-         		console.log('It\'s even!');
-         		evenBox();
+         		oddBox();
          		return;
          }
-
+         // if the box number is odd, we want to change our even boxes.
          if ( boxNum % 2 === 1 ) {
-         	console.log('It\'s odd!');
-         	oddBox();
+         	console.log('it\'s odd!');
+         	evenBox();
          	return;
          }
          
@@ -88,25 +87,25 @@
       //  Changes need to be refactored to add and remove classes rather than apply classes with jQuery.  
       // oddBox is fired when an odd box that is not 3 is clicked.
       // Turns all even boxes blue and text white.
-      function oddBox() {
+      function evenBox() {
       	// Cache data length to save lookups.
       	let len = dataArr.length;
-
+      	console.log('Firing evenBox');
       	for ( let i = 2; i <= len; i += 2){
       		let id = '#'+i;
-      		$( id ).css( );
+      		$( id ).addClass('.changedeven');
       	}
       }
       
       // evenBox is fired when an even box is clicked.
       // Turns odd boxes red and their text white.
-      function evenBox() {
+      function oddBox() {
       	// Cache data length to save lookups.
       	let len = dataArr.length;
 
       	for ( let i = 1; i <= len; i += 2){
       		let id = '#'+i;
-      		$( id ).css( {'background-color':'#F50C0C', 'color':'#000000'} );
+      		$( id ).addClass('changedodd');
       	}
       }
 

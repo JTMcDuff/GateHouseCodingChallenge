@@ -40,3 +40,15 @@ body {
 	border: 2px solid #000000;
 	float: left;
 }
+
+/* changedeven class holds alternate css style for even boxes */
+.changedeven {
+	background-color: #380CF5;
+	color:#ffffff;
+}
+
+/* changedodd class holds alternate css style for odd boxes */
+.changedodd {
+	background-color:#F50C0C;
+	color:#000000;
+}
