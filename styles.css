@@ -2,6 +2,7 @@
 	margin: 0;
 	padding: 0;
 	box-sizing: border-box;
+	border: 1px solid #000000;
 }
 
 /* All elements use Arial and centered text */
@@ -16,8 +17,7 @@ body {
 	height: 900px;
 	margin: auto;
 	word-wrap: normal;
-	background-color: #2AB94C;
-	border: 2px solid #000000;
+	background-color: #ffffff;
 }
 
 
@@ -28,7 +28,6 @@ body {
 	line-height: 100px;
 	font-style: italic;
 	color: #ffffff;
-	margin: 0;
 	background-color: #000000;
 }
 
@@ -42,7 +41,7 @@ body {
 	background-color: #ffffff;
     float: left;
 	width: 100%;
-	border: 1px solid #000000;
+	
 }
 /* databox class is for supplied by js array. */
 .databox {
@@ -51,7 +50,6 @@ body {
 	line-height: 300px;
 	background-color: #ffffff;
 	font-size: 45px;
-	border: 2px solid #000000;
 	float: left;
 }
 
