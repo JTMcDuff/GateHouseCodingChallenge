@@ -13,6 +13,12 @@
 				<h1> GATEHOUSE MEDIA PRESENTS... </h1>
 		    </div>
 
+		    <br>
+
+		    <div class="thankyou endedGame">
+		      <h2> Thank you for playing! </h2>
+		    <div>
+
 		</div>
 
     <script>
@@ -30,20 +36,29 @@
       	//Append our desktop box after box four
       	let titleBoxDiv = '<div class="currentview"> <h2> DESKTOP VIEW </h2> </div> ';
       	$( titleBoxDiv ).insertAfter( '#4' ) ;
+        
+        // *** Event Listeners ***
 
-	      // Event listener for click events on our data boxes
-	      // Use unique id attribute to determine if even / odd, etc.
-	      $( '.databox' ).click( (element)=> {
-             let boxNum = Number( element.target.id );
-             // Feed our number into our determiner function.
-             boxClick(boxNum);
-	      });
+	    // Event listener for click events on our data boxes
+	    // Use unique id attribute to determine if even / odd, etc.
+	    $( '.databox' ).click( (element)=> {
+	        let boxNum = Number( element.target.id );
+	        // Feed our number into our determiner function.
+	        boxClick(boxNum);
+	    });
 
-	      //Event Listener for header click event
-	      $( '.titlebox').click( ()=> {
-	      	// Fire reset function.
+	    //Event Listener for header click event
+	    $( '.titlebox').click( ()=> {
+	    	// Fire reset function.
 	      	resetScreen();
-	      });
+	    });
+
+	    //Event listener for current view click event
+	    $('.currentview').click( ()=> {
+	    	//fire endGame function.
+	    	endGame();
+	    });
+
       });
 
       // boxClick accepts the box id and fires the appropriate box change function.
@@ -110,13 +125,23 @@
       	}
       }
 
-      // Resets the screen when the header is clicked.
+      // Resets the screen by swapping the endedGame class on the appropriate divs.
       function resetScreen() {
-      	// Remove any instances of the changed classes.
+      	// Remove any instances of the databox changing classes.
       	$('.databox').removeClass('changedodd');
       	$('.databox').removeClass('changedeven');
-      }
+      	$('.databox').removeClass('endedGame');
 
+      	// Display the thank you.
+      	$('.thankyou').addClass('endedGame');
+      }
+      
+      // Ends the game by swapping the endedGame class on the appropriate divs.
+      function endGame() {
+      	// Turn off display of the boxes by appending the endedGame class.
+      	$('.databox').addClass('endedGame');
+        $('.thankyou').removeClass('endedGame');
+      }
 
     </script>
 

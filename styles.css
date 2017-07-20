@@ -64,3 +64,8 @@ body {
 	background-color:#F50C0C;
 	color:#000000;
 }
+
+/*  gameended class is added to boxes when the view box is clicked */
+.endedGame {
+	display: none;
+}
