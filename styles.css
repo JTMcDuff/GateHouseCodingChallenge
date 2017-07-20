@@ -29,6 +29,18 @@ body {
 	background-color: #000000;
 }
 
+/* currentview is for desktop view / mobile view box */
+.currentview {
+	font-size: 20px;
+	font-weight: bold;
+	height: 100px;
+	line-height: 100px;
+	color: #000000;
+	background-color: #ffffff;
+	float: left;
+	width: 100%;
+	border: 1px solid #000000;
+}
 /* databox class is for supplied by js array. */
 .databox {
 	width: 23%;
