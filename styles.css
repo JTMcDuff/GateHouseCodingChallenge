@@ -26,6 +26,7 @@ body {
 	font-weight: bold;
 	font-style: italic;
 	color: #ffffff;
+	margin: 0;
 	background-color: #000000;
 }
 
@@ -43,12 +44,11 @@ body {
 }
 /* databox class is for supplied by js array. */
 .databox {
-	width: 24%;
-	height: 300px;
+	width: 199px;
+	height: 335px;
 	line-height: 300px;
 	background-color: #ffffff;
 	font-size: 45px;
-	margin: 0 1px 0 1px;
 	border: 2px solid #000000;
 	float: left;
 }
