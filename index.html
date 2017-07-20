@@ -37,7 +37,8 @@
 
 	      //Event Listener for header click event
 	      $( '.titlebox').click( ()=> {
-
+	      	// Fire reset function.
+	      	resetScreen();
 	      });
       });
 
@@ -55,7 +56,6 @@
          }
          // if the box number is odd, we want to change our even boxes.
          if ( boxNum % 2 === 1 ) {
-         	console.log('it\'s odd!');
          	evenBox();
          	return;
          }
@@ -70,7 +70,6 @@
       	let len = dataArr.length;
       	for ( let i = 1; i <= len; i ++){
       	  let id = '#'+i;
-      	  console.log('Fading out '+i);
           $( id ).delay(i * 210).fadeToggle( '100' );
 
       	}
@@ -78,7 +77,6 @@
         $('.databox').promise().done( ()=> {
           for ( let j = 1; j <= len; j ++){
       	  let id = '#'+j;
-      	  console.log('Fading in '+j);
           $( id ).delay(j * 210).fadeToggle( '100' );
 
       	  }
@@ -90,7 +88,6 @@
       function evenBox() {
       	// Cache data length to save lookups.
       	let len = dataArr.length;
-      	console.log('Firing evenBox');
       	for ( let i = 2; i <= len; i += 2){
       		let id = '#'+i;
       		$( id ).addClass('changedeven');
@@ -109,6 +106,12 @@
       	}
       }
 
+      // Resets the screen when the header is clicked.
+      function resetScreen() {
+      	// Remove any instances of the changed classes.
+      	$('.databox').removeClass('changedodd');
+      	$('.databox').removeClass('changedeven');
+      }
     </script>
 
   </body>
