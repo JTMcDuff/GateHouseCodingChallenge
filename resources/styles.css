@@ -2,7 +2,6 @@
 	margin: 0;
 	padding: 0;
 	box-sizing: border-box;
-	border: 1px solid #000000;
 }
 
 /* All elements use Arial and centered text */
@@ -18,8 +17,9 @@ body {
 	margin: auto;
 	word-wrap: normal;
 	background-color: #ffffff;
+	border: 2px solid black;
+	
 }
-
 
 .titlebox {
 	font-size: 20px;
@@ -41,6 +41,7 @@ body {
 	background-color: #ffffff;
     float: left;
 	width: 100%;
+	border: 2px solid black;
 	
 }
 /* databox class is for supplied by js array. */
@@ -51,6 +52,7 @@ body {
 	background-color: #ffffff;
 	font-size: 45px;
 	float: left;
+	border: 2px solid black;
 }
 
 /* changedeven class holds alternate css style for even boxes */
@@ -73,4 +75,12 @@ body {
 /* mobile is used for mobile-only text */
 .mobile {
 	display: none;
+}
+
+.forms {
+	position: absolute;
+	bottom: 0;
+	width: 100%;
+	height: 50px;
+	text-align: center;
 }

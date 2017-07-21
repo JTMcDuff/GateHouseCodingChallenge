@@ -1,10 +1,10 @@
 <?php
  include 'scripts/conn.php';
   $conn = new Conn();
+
+  //Connect on page load.
   $connection=$conn->connect();
 
-  $conn->update($connection,2,'test3');
-  $conn->retrieve($connection);
 ?>
 
 <!DOCTYPE html>
@@ -31,10 +31,15 @@
 
 		    <div class="thankyou endedGame">
 		      <h2> Thank you for playing! </h2>
-		    <div>
+		    </div>
 
+
+       
 		</div>
-    
+    <br>
+     <div class="forms">
+          <h2> Take me to forms. </h2>
+    </div>
 
     <script>
       // Dummy array with data.
