@@ -33,13 +33,13 @@
 		      <h2> Thank you for playing! </h2>
 		    </div>
 
-
+       <div class="forms">
+           <a href="forms.php"> Take me to forms. </a>
+       </div>
        
 		</div>
-    <br>
-     <div class="forms">
-          <h2> Take me to forms. </h2>
-    </div>
+
+ 
 
     <script>
       // Dummy array with data.
