@@ -1,20 +1,29 @@
 
 
+/*  Swittch to mobile view when screen width < 800px. */
 @media only screen and (max-width: 800px) {
-   .container {
+	.container {
 		width: 100%;
 		height: 100%;
 		margin: auto;
 		word-wrap: normal;
 		background-color: #ffffff;
-    }
+	}
 
-    .databox {
+	.databox {
 		width: 100%;
 		height: 100px;
 		line-height: 100px;
 		background-color: #ffffff;
 		font-size: 20px;
+	}
+    
+    /* desktop and mobile all for changing text */
+    .desktop {
+    	display: none;
     }
 
+    .mobile {
+	   display: normal;
+    }
 }

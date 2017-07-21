@@ -7,7 +7,8 @@ for ( let i = 0; i < dataArr.length; i ++) {
 	}
 
 	//Append our desktop box after box four
-	let titleBoxDiv = '<div class="currentview"> <h2> DESKTOP VIEW </h2> </div> ';
+	let titleBoxDiv = `<div class="currentview"> <h2 class="desktop"> DESKTOP VIEW </h2>
+	<h2 class="mobile"> MOBILE VIEW </h2> </div>`;
 	$( titleBoxDiv ).insertAfter( '#4' ) ;
 
 // *** Event Listeners ***
