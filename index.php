@@ -13,13 +13,17 @@ if($conn->connect_error){
   echo "Error.";
 }
 
-$sql = "INSERT INTO gamedata(location,value) VALUES ('1','TEST')";
-
+//$sql = "INSERT INTO gamedata(location,value) VALUES ('1','TEST')";
+/*
 if($conn->query($sql)===TRUE){
   echo"Success.";
 } else {
   echo "failed.";
 }
+*/
+$results = $conn->query("Select * from gamedata");
+
+echo $results->fetch_all();
 
 ?>
 
