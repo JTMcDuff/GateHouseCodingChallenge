@@ -69,3 +69,8 @@ body {
 .endedGame {
 	display: none;
 }
+
+/* mobile is used for mobile-only text */
+.mobile {
+	display: none;
+}
