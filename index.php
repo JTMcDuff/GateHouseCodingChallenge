@@ -1,7 +1,9 @@
 <?php
  include 'scripts/conn.php';
   $conn = new Conn();
-  $conn->connect();
+  $connection=$conn->connect();
+
+  $conn->insert($connection,2,'test2');
 ?>
 
 <!DOCTYPE html>
