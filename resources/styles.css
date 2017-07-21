@@ -1,0 +1,71 @@
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	border: 1px solid #000000;
+}
+
+/* All elements use Arial and centered text */
+body {
+	font-family: Arial;
+	text-align: center;
+}
+
+/* Over container for holding our content */
+.container {
+	width: 800px;
+	height: 900px;
+	margin: auto;
+	word-wrap: normal;
+	background-color: #ffffff;
+}
+
+
+.titlebox {
+	font-size: 20px;
+	font-weight: bold;
+	height: 100px;
+	line-height: 100px;
+	font-style: italic;
+	color: #ffffff;
+	background-color: #000000;
+}
+
+/* currentview is for desktop view / mobile view box */
+.currentview {
+	font-size: 20px;
+	font-weight: bold;
+	height: 100px;
+	line-height: 100px;
+	color: #000000;
+	background-color: #ffffff;
+    float: left;
+	width: 100%;
+	
+}
+/* databox class is for supplied by js array. */
+.databox {
+	width: 199px;
+	height: 335px;
+	line-height: 300px;
+	background-color: #ffffff;
+	font-size: 45px;
+	float: left;
+}
+
+/* changedeven class holds alternate css style for even boxes */
+.changedeven {
+	background-color: #380CF5;
+	color:#ffffff;
+}
+
+/* changedodd class holds alternate css style for odd boxes */
+.changedodd {
+	background-color:#F50C0C;
+	color:#000000;
+}
+
+/*  gameended class is added to boxes when the view box is clicked */
+.endedGame {
+	display: none;
+}
