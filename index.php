@@ -1,30 +1,7 @@
 <?php
-  /* Obviously root and no password isn't viable for production, but this is a local test. */
-
-$servername='127.0.0.1';
-$username='root';
-$password='';
-$dbname='gatehouse';
-
-$conn = new mysqli($servername,$username,$password,$dbname);
-
-if($conn->connect_error){
-  die($con->connect_server);
-  echo "Error.";
-}
-
-//$sql = "INSERT INTO gamedata(location,value) VALUES ('1','TEST')";
-/*
-if($conn->query($sql)===TRUE){
-  echo"Success.";
-} else {
-  echo "failed.";
-}
-*/
-$results = $conn->query("Select * from gamedata");
-
-echo $results->fetch_all();
-
+ include 'scripts/conn.php';
+  $conn = new Conn();
+  $conn->connect();
 ?>
 
 <!DOCTYPE html>
