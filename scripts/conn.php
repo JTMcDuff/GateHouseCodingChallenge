@@ -22,8 +22,14 @@ class Conn {
     }
     
     // This should accept args for more specific queries at some point.
-    public function retrieve() {
-      $results = $conn->query("Select * from gamedata");
+    public function retrieve($connection) {
+      $sql = "Select * from gamedata";
+      $results = $connection->query($sql);
+      if($results){
+      	echo "Successful retrieval.";
+      } else{
+      	echo "Retrieval Failure.";
+      }
       return $results;
     }
 
