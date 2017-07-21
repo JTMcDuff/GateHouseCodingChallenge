@@ -3,7 +3,7 @@
   $conn = new Conn();
   $connection=$conn->connect();
 
-  //$conn->insert($connection,2,'test2');
+  $conn->update($connection,2,'test3');
   $conn->retrieve($connection);
 ?>
 
