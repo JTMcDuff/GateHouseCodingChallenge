@@ -1,17 +1,25 @@
 <?php
   /* Obviously root and no password isn't viable for production, but this is a local test. */
 
-  $link = mysqli_connect("127.0.0.1", "root","", "gatehouse");
+$servername='127.0.0.1';
+$username='root';
+$password='';
+$dbname='gatehouse';
 
-if (!$link) {
-    echo "Error: Unable to connect to MySQL." . PHP_EOL;
-    echo "Debugging errno: " . mysqli_connect_errno() . PHP_EOL;
-    echo "Debugging error: " . mysqli_connect_error() . PHP_EOL;
-    exit;
+$conn = new mysqli($servername,$username,$password,$dbname);
+
+if($conn->connect_error){
+  die($con->connect_server);
+  echo "Error.";
 }
 
-//echo "Success: A proper connection to MySQL was made! The my_db database is great." . PHP_EOL;
-//echo "Host information: " . mysqli_get_host_info($link) . PHP_EOL;
+$sql = "INSERT INTO gamedata(location,value) VALUES ('1','TEST')";
+
+if($conn->query($sql)===TRUE){
+  echo"Success.";
+} else {
+  echo "failed.";
+}
 
 ?>
 
@@ -51,8 +59,9 @@ if (!$link) {
     </script>
 
   </body>
-      <!-- scripts.js contains all the on click scripts.
-         startup.js contains the event listeners and initial events on page load
+    <!--
+      scripts.js contains all the on click scripts.
+      startup.js contains the event listeners and initial events on page load
     -->
     <script src='scripts/scripts.js' type='text/javascript'></script>
     <script src='scripts/startup.js' type='text/javascript'></script>
